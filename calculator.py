@@ -32,8 +32,11 @@ try:
             result = SUB(var1,var2)
             st.success("Result of {} - {} = {} ".format(var1,var2,result))
         elif operation == "/":
-            result = DIV(var1,var2)
-            st.success("Result of {} / {} = {} ".format(var1,var2,result))
+            try:
+                result = DIV(var1,var2)
+                st.success("Result of {} / {} = {} ".format(var1,var2,result))
+            except:
+                st.error("Can't Divde by Zero")
         elif operation == "*":
             result = MUL(var1,var2)
             st.success("Result of {} * {} = {} ".format(var1,var2,result))
